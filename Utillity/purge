@@ -1,0 +1,54 @@
+{
+  "name": "purge",
+  "permissions": "MANAGE_MESSAGES",
+  "restriction": "1",
+  "_id": "OKrdS",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "messages",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "1",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "channel": "0",
+      "count": "${tempVars(\"messages\")}",
+      "condition": "0",
+      "custom": "",
+      "varName": "",
+      "name": "Delete Bulk Messages"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member}, i have deleted **${tempVars(\"messages\")}** messages!",
+      "storage": "1",
+      "varName2": "1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "3",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    }
+  ],
+  "comType": "0",
+  "_aliases": [
+    "clear"
+  ]
+}
