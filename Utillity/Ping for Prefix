@@ -1,0 +1,44 @@
+{
+  "name": "<@!YOUR-BOT-ID>",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "zENqx",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "server.prefix",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "2",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Hey ${member}, my prefix is \"**!**\"\nWant my commands? do \"`!help`\"",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Hey ${member}, my prefix is \"**${serverVars(\"prefix\")}**\"\nWant my commands? do \"`${serverVars(\"prefix\")}help`\"",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "2"
+}
