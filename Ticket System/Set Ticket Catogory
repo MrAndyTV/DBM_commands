@@ -1,0 +1,45 @@
+{
+  "name": "setcotogory",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "GBYJQ",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "2",
+      "varName": "catogory.id",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "find": "${serverVars(\"catogory.id\")}",
+      "storage": "1",
+      "varName": "catogory.name",
+      "name": "Find Category"
+    },
+    {
+      "category": "1",
+      "varName": "catogory.name",
+      "info": "1",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Category Info"
+    },
+    {
+      "storage": "2",
+      "varName": "catogory.id",
+      "name": "Save Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member}, I have set the catogory \"**${tempVars(\"catogory.name\")}**\" to the ticket catogory.\nTo end it please delete the catogory.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
