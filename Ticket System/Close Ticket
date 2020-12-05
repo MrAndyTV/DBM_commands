@@ -1,0 +1,93 @@
+{
+  "name": "close",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "CDHgR",
+  "actions": [
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "channel",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "channel",
+      "comparison": "10",
+      "value": "ticket-",
+      "iftrue": "2",
+      "iftrueVal": "5",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "✉ ${member} this is not a ticket.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "✉ ${member} closing ticket please wait. Want to keep it open write something.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.length > 0 && author.id === user.id",
+      "max": "1",
+      "time": "10000",
+      "iftrue": "2",
+      "iftrueVal": "10",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Channel"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "✉ ${member} I have closed the ticket. With name **${tempVars(\"channel\")}**.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "✉ ${member} Ok, I will not close it.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
