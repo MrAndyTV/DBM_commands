@@ -1,0 +1,70 @@
+{
+  "name": "rename",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "cEChR",
+  "actions": [
+    {
+      "info": "1",
+      "find": "Support Team",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "role": "3",
+      "varName2": "role",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check If Member has Role"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "is-ticket?",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "is-ticket?",
+      "comparison": "5",
+      "value": "ticket-",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "name-of-ticket",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "channelType": "0",
+      "toChange": "0",
+      "newState": "ticket-${tempVars(\"name-of-ticket\")}",
+      "name": "Edit Channel"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member}, I have changed the name of this ticket to \n```fix\nticket-${tempVars(\"name-of-ticket\")}\n```",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
