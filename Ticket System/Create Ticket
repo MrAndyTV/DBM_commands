@@ -1,0 +1,242 @@
+{
+  "name": "ticket",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "HLgcZ",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket.system1",
+      "changeType": "1",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "ticket.system1",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "tickets_made.",
+      "name": "Store Server Data"
+    },
+    {
+      "channelName": "ticket-${tempVars(\"tickets_made.\")}",
+      "topic": "Do not remove \"ticket-\" from the channel name!",
+      "position": "",
+      "storage": "1",
+      "varName": "channel",
+      "categoryID": "${serverVars(\"catogory.id\")}",
+      "reason": "",
+      "name": "Create Text Channel"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "subject",
+      "name": "Store Message Info"
+    },
+    {
+      "channel": "5",
+      "varName": "channel",
+      "message": "${member}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "name",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "icon",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "3",
+      "varName": "channel",
+      "member": "1",
+      "varName2": "",
+      "permission": "VIEW_CHANNEL",
+      "state": "0",
+      "reason": "",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "storage": "0",
+      "varName": "delete",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "storage": "1",
+      "varName": "subject",
+      "comparison": "11",
+      "value": "!ticket",
+      "iftrue": "2",
+      "iftrueVal": "18",
+      "iffalse": "0",
+      "iffalseVal": "16",
+      "name": "Check Variable"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "message",
+      "name": "Store Command Params"
+    },
+    {
+      "title": "✉ Ticket",
+      "author": "",
+      "color": "35EAFF",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Hey, ${tempVars(\"name\")} our support team will be with you in no time, please wirte down your question or problem so we can help you as soon as possible.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Subject:",
+      "message": "${tempVars(\"message\")}",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"name\")}",
+      "footerIcon": "${tempVars(\"icon\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "call": "23",
+      "name": "Jump to Action"
+    },
+    {
+      "title": "✉ Ticket",
+      "author": "",
+      "color": "35EAFF",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "message": "Hey, ${tempVars(\"name\")} our support team will be with you in no time, please wirte down your question or problem so we can help you as soon as possible.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "fieldName": "Subject:",
+      "message": "No subject",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "message": "${tempVars(\"name\")}",
+      "footerIcon": "${tempVars(\"icon\")}",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed1",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member} you're ticket was made ${tempVars(\"channel\")}!",
+      "storage": "1",
+      "varName2": "delete",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "3",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "delete",
+      "reason": "",
+      "name": "Delete Message"
+    }
+  ],
+  "_aliases": [
+    "new"
+  ],
+  "comType": "0"
+}
