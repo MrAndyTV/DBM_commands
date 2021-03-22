@@ -1,0 +1,156 @@
+{
+  "name": "botinfo",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "WJRNM",
+  "actions": [
+    {
+      "info": "3",
+      "storage": "1",
+      "varName2": "guilds",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "4",
+      "storage": "1",
+      "varName2": "users",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "2",
+      "storage": "1",
+      "varName2": "ping",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "27",
+      "storage": "1",
+      "varName2": "ram",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "29",
+      "storage": "1",
+      "varName2": "cpu",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "21",
+      "storage": "1",
+      "varName2": "discordjs",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "info": "31",
+      "storage": "1",
+      "varName2": "nodejs",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "title": "Bot Info",
+      "author": "",
+      "color": "024BFF",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "https://cdn.discordapp.com/attachments/806808870705168385/806812066823929907/Neon_Logo_Rounded_edge.png",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Guilds",
+      "message": "${tempVars(\"guilds\")}",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Ping",
+      "message": "${tempVars(\"ping\")} ms",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "CPU Usage",
+      "message": "${tempVars(\"cpu\")}%",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Ram Usage",
+      "message": "${tempVars(\"ram\")} mb",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "NodeJS V",
+      "message": "${tempVars(\"nodejs\")} v",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "DiscordJS V",
+      "message": "${tempVars(\"discordjs\")} v",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Support",
+      "message": "[Click Me](https://discord.gg/yrD7eKSvRN)",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "fieldName": "Invite",
+      "message": "[Click Me](#)",
+      "inline": "0",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "Bot Name here",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_aliases": []
+}
