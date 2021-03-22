@@ -16,3 +16,9 @@ How can I add this to my Discord Bot Maker Program?
 
 You can easily download the mods by following this [Guide](https://github.com/dbm-network/mods#downloads)
 
+# Upcoming!
+
+- Fully working Music System.
+- New Moderation System.
+- New Ticket System (May be with reaction).
+- Twitch Notification when live.
