@@ -1,0 +1,116 @@
+{
+  "name": "play",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "kbHtf",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "prm",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "prm",
+      "comparison": "10",
+      "value": "'https://youtube.com/'",
+      "iftrue": "2",
+      "iftrueVal": "7",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "${member}, You have to use an valid URL for me to play music!\n\nExample: `(prefix)play (song url)`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "iftrue": "2",
+      "iftrueVal": "14",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check is Bot in Voice Channel"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "name": "Join Voice Channel"
+    },
+    {
+      "url": "${tempVars(\"prm\")  || \"\"}",
+      "seek": "0",
+      "volume": "25",
+      "passes": "1",
+      "bitrate": "",
+      "type": "1",
+      "name": "Play YouTube Video"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "🎶**Playing:** ${tempVars(\"prm\") || \"\"}",
+      "storage": "1",
+      "varName2": "clear",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "url": "${tempVars(\"prm\")  || \"\"}",
+      "seek": "0",
+      "volume": "25",
+      "passes": "1",
+      "bitrate": "",
+      "type": "0",
+      "name": "Play YouTube Video"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "🎶**Added to queue:** ${tempVars(\"prm\") || \"\"}",
+      "storage": "1",
+      "varName2": "clear",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "reason": "",
+      "name": "Delete Message"
+    }
+  ]
+}
