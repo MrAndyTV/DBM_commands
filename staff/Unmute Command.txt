@@ -1,0 +1,380 @@
+{
+  "name": "Unmute",
+  "permissions": "KICK_MEMBERS",
+  "restriction": "1",
+  "_id": "vlvbG",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "user",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "user",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "35",
+      "name": "Check Variable"
+    },
+    {
+      "info": "1",
+      "find": "mod-logs",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Find Channel"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "servername",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "@member",
+      "info": "0",
+      "storage": "1",
+      "varName2": "commander",
+      "name": "Store Member Info"
+    },
+    {
+      "info": "1",
+      "find": "Muted",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "storage": "1",
+      "varName": "user",
+      "comparison": "10",
+      "value": "<",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "21",
+      "name": "Check Variable"
+    },
+    {
+      "info": "1",
+      "find": "${tempVars(\"user1\")}",
+      "storage": "1",
+      "varName": "member",
+      "find2": "0",
+      "name": "Find Member"
+    },
+    {
+      "member": "0",
+      "varName": "member",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "member",
+      "info": "3",
+      "storage": "1",
+      "varName2": "membertag",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "006CFF",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed4",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed4",
+      "message": "✅ _**${tempVars(\"membertag\")} was unmuted!**_\n   ",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed4",
+      "message": "id: ${tempVars(\"id\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed4",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed4",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"servername\")}",
+      "color": "006CFF",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed3",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed3",
+      "message": "✅ _**You where unmuted ${tempVars(\"membertag\")}!**_\n   \n\n`moderator:`\n${tempVars(\"commander\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed3",
+      "channel": "2",
+      "varName2": "@member",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "member": "0",
+      "varName2": "member",
+      "role": "3",
+      "varName": "role",
+      "name": "Remove Member Role"
+    },
+    {
+      "call": "34",
+      "name": "Jump to Action"
+    },
+    {
+      "info": "1",
+      "find": "Muted",
+      "storage": "1",
+      "varName": "role",
+      "name": "Find Role"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"user\")}",
+      "storage": "1",
+      "varName": "member",
+      "find2": "0",
+      "name": "Find Member"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "3",
+      "storage": "1",
+      "varName2": "idtag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "member",
+      "info": "1",
+      "storage": "1",
+      "varName2": "id2",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "006CFF",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "✅**_${tempVars(\"idtag\")} was unmuted!_**\n  ",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "id: ${tempVars(\"id2\")}",
+      "footerIcon": "",
+      "name": "Set Embed Footer"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "channel",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "title": "",
+      "author": "${tempVars(\"servername\")}",
+      "color": "006CFF",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "message": "✅**_You where unmuted ${tempVars(\"idtag\")}!_**\n\n`moderator:`\n${tempVars(\"commander\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed2",
+      "channel": "5",
+      "varName2": "idmember",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "member": "2",
+      "varName2": "member",
+      "role": "3",
+      "varName": "role",
+      "name": "Remove Member Role"
+    },
+    {
+      "call": "38",
+      "name": "Jump to Action"
+    },
+    {
+      "title": "Mute command ussage",
+      "author": "",
+      "color": "006CFF",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed5",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed5",
+      "message": "n!unmute @member \n\nn!unmute id\n\n**__Example:__**\n@ ==> n!unmute @Andreasda223 \n\nid ==> n!unmute 510343333309933056",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed5",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    }
+  ]
+}
